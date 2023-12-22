@@ -1,6 +1,6 @@
 package day01
 
-import day01.Day01Part01.getWordCalibrationValue
+import day01.Day01Part01.solveChallenge
 import println
 import readInput
 
@@ -11,17 +11,12 @@ object Day01Part01 {
         val lastDigit = digitsOfWord.last().digitToInt()
         return firstDigit * 10 + lastDigit
     }
+
+    fun solveChallenge(input: List<String>): Int =
+        input.fold(0) { acc, word -> acc + getWordCalibrationValue(word) }
 }
 
 fun main() {
-
-    fun solveChallenge(input: List<String>): Int {
-
-        val total = input.fold(0) { acc, word -> acc + getWordCalibrationValue(word) }
-
-        return total
-    }
-
     val input = readInput("day01")
     solveChallenge(input).println()
 }
