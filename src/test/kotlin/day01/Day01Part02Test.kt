@@ -1,4 +1,4 @@
-
+package day01
 import day01.Day01Part02.getWordCalibrationValue
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
